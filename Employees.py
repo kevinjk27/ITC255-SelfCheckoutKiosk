@@ -14,9 +14,10 @@ class Employees():
         self.employeeFirstName = employeeFirstName
         self.employeeLastName = employeeLastName
 
-    def updateEmployeePosition(self, position):
+    def updateEmployeePosition(self,employeeID, position):
+        self.employeeID = employeeID
         self.position = position
 
 
     def __str__(self):
-        return self.employeeID + " " + self.employeeFirstName + " " + self.employeeLastName + "\n Position: " + self.position
+        return str(self.employeeID) + " => " + self.employeeFirstName + " " + self.employeeLastName + "\nPosition: " + self.position

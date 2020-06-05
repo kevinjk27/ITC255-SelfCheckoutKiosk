@@ -9,4 +9,4 @@ class Payments():
 
 
     def __str__(self):
-        return "Payment ID :" + self.paymentID + "\n Payment Method :" + self.paymentMethod + "\n Payment Amount :" + self.paymentAmount
+        return "Payment ID :" + str(self.paymentID) + "\n Payment Method :" + str(self.paymentMethod) + "\n Payment Amount :$" + str(self.paymentAmount)

@@ -1,7 +1,7 @@
 from Items import Items
 class Discounts(Items):
     def __init__(self, itemID, discountID, discountAmount):
-        Items.__init__(self, itemID)
+        Items.__init__(self, itemID, discountID, discountAmount)
         self.discountID = discountID
         self.discountAmount = discountAmount
 
@@ -11,4 +11,4 @@ class Discounts(Items):
 
 
     def __str__(self):
-        return "Discount ID :" + self.discountID + "\n Tax Amount :" + self.discountAmount
+        return "Discount ID : " + str(self.discountID) + "\n Discount Amount : $" + str(self.discountAmount)

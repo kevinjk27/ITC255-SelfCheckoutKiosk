@@ -8,4 +8,4 @@ class Kiosks():
 
 
     def __str__(self):
-        return "Kiosk #" + self.kioskID + " is " + self.kioskStatus
+        return "Kiosk #" + self.kioskID + " is " + self.kioskStatus+"!"

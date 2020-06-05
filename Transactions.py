@@ -9,10 +9,11 @@ from Taxes import Taxes
 
 
 class Transactions():
-    def __init__(self, transactionID, item, customer, payment, discount, register, tax, total):
+    def __init__(self, transactionID,transactionDate, transactionTime, item, customer, payment, discount, register, tax, total):
         self.transactionID = transactionID
         self.transactionDate = datetime.date.today()
-        self.transactionTime = datetime.time.strftime()
+        now = datetime.datetime.now()
+        self.transactionTime = now.strftime("%H:%M:%S")
         self.item = []
         self.customer = customer
         self.payment = payment
@@ -58,4 +59,4 @@ class Transactions():
         self.discount = discount
 
     def __str__(self):
-        return self.transactionID + " item bought: " + len(self.item) + " Thank You!"
+        return "Transaction #"+str(self.transactionID) + " item bought: " + str(len(self.item)) + " Thank You!"

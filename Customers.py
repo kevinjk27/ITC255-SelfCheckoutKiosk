@@ -13,8 +13,9 @@ class Customers():
         self.customerFirstName = customerFirstName
         self.customerLastName = customerLastName
 
-    def inputRewardsPoint(self, customerRewardsPoint):
+    def inputRewardsPoint(self, customerID, customerRewardsPoint):
+        self.customerID = customerID
         self.customerRewardsPoint = customerRewardsPoint
 
     def __str__(self):
-        return self.customerFirstName + self.customerLastName + ",\n" + "You have :" + self.customerRewardsPoint + " reward points"
+        return self.customerFirstName + " " + self.customerLastName + ",\n" + "You have : " + str(self.customerRewardsPoint) + " reward points"
