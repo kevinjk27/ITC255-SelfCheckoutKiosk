@@ -91,8 +91,15 @@ class TestTransactions(unittest.TestCase):
     def setUp(self):
         self.transactions = Transactions(321001, "2020-06-04", "20:33:51", ['Gala Apple', 'Sour Patch Watermelon Soft & Chewy Candy - 8oz','Organic Green Bell Pepper'], 400901, 5.97, 0.05, "K0091", 0.00, 5.92)
 
+    def test_AddItem(self):
+        self.assertEquals(self.transactions.addItem("Gala Apple"),['Gala Apple'])
+        self.assertEquals(self.transactions.addItem('Sour Patch Watermelon Soft & Chewy Candy - 8oz'),['Gala Apple', 'Sour Patch Watermelon Soft & Chewy Candy - 8oz'])
+        self.assertEquals(self.transactions.addItem('Organic Green Bell Pepper'),['Gala Apple', 'Sour Patch Watermelon Soft & Chewy Candy - 8oz','Organic Green Bell Pepper'])
+
     def test_EmployeeString(self):
         self.assertEquals(str(self.transactions), "Transaction #321001 item bought: 3 Thank You!")
+
+    
 
 
 

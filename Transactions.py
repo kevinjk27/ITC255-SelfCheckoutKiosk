@@ -51,6 +51,7 @@ class Transactions():
 
     def addItem(self, item):
         self.item.append(item)
+        return self.item
 
     def addCustomer(self, customer):
         self.customer = customer
@@ -60,3 +61,11 @@ class Transactions():
 
     def __str__(self):
         return "Transaction #"+str(self.transactionID) + " item bought: " + str(len(self.item)) + " Thank You!"
+
+
+trx = Transactions(321001, "2020-06-04", "20:33:51", ['Gala Apple', 'Sour Patch Watermelon Soft & Chewy Candy - 8oz','Organic Green Bell Pepper'], 400901, 5.97, 0.05, "K0091", 0.00, 5.92)
+trx.addItem('Gala Apple')
+trx.addItem('Sour Patch Watermelon Soft & Chewy Candy - 8oz')
+trx.addItem('Organic Green Bell Pepper')
+print(trx.item)
+print(trx.__str__())
